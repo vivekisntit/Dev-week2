@@ -1,5 +1,12 @@
 name=input("Enter your name: ")
-marks=int(input("Enter your marks (0-100):"))
+while True:
+    try:
+        marks=float(input("Enter your marks (0-100): "))
+        if 0 <= marks <= 100:
+            break
+    except ValueError:
+        print("Invalid input. Please enter a number between 0 and 100.")
+        
 print(f"📊 RESULT FOR {name.upper()}:")
 print(f"Marks: {marks}/100")
 print("Grade:", end=" ")
